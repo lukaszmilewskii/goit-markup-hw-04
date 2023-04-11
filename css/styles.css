@@ -10,6 +10,9 @@
   --background-color-3: #f5f4fa;
   --button-background-color: #f5f4fa;
   --button-background-color-hover: #2196f3;
+  --icon-color-1: #afb1b8;
+  --icon-color-hover: #ffffff;
+  --icon-background-color-hover: #2196f3;
 }
 * {
   margin: 0;
@@ -20,6 +23,7 @@ ul {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 button {
   cursor: pointer;
@@ -30,6 +34,13 @@ body {
   font-family: var(--font-primary);
   /* color: var(--body-general-font-color); */
   font-size: 16px;
+  letter-spacing: 0.03em;
+}
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
   letter-spacing: 0.03em;
 }
 .container {
@@ -82,6 +93,7 @@ body {
 .header-contact a:hover,
 .header-contact a:focus {
   color: var(--font-color-2);
+  stroke: var(--font-color-2);
 }
 .header-contact {
   display: flex;
@@ -112,6 +124,11 @@ body {
   border-radius: 4px;
   padding: 6px 22px;
 }
+.filter-item:hover,
+.filter-item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 .filter-list button:hover,
 .filter-list button:focus {
   color: var(--font-color-4);
@@ -128,6 +145,11 @@ body {
 .product-item {
   border: 1px solid #eeeeee;
   border-top: none;
+}
+.product-item:hover,
+.product-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .products-list li h3 {
   font-weight: 700;
@@ -169,6 +191,9 @@ body {
   text-align: center;
 }
 .main-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: url(../images/people-working.jpg);
   background-color: var(--background-color-2);
 }
 .main-section h1 {
@@ -196,20 +221,28 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-.temporary-lorem-class ul {
+.our-trumps ul {
   display: flex;
+  gap: 30px;
 }
-.temporary-lorem-class ul li h3 {
+.our-trumps ul li h3 {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--font-color-1);
+  margin-bottom: 10px;
 }
-.temporary-lorem-class ul li p {
+.our-trumps ul li p {
   font-size: 14px;
   line-height: 1.71;
   color: var(--font-color-3);
+}
+.our-trumps-item {
+  background-color: var(--background-color-3);
+  text-align: center;
+  padding: 25px 0;
+  margin-bottom: 30px;
 }
 .what-we-do {
   padding-top: 0;
@@ -223,14 +256,6 @@ body {
 }
 .our-team-container {
   background-color: var(--background-color-3);
-}
-.what-we-do h2,
-.our-team h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 .our-team ul {
   display: flex;
@@ -257,4 +282,82 @@ body {
     0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
   padding-bottom: 30px;
+}
+.our-team-social-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  padding-top: 16px;
+}
+.our-team-social-links svg {
+  fill: var(--icon-color-1);
+  padding: 12px;
+}
+.our-team-social-links a {
+  max-width: 44px;
+  max-height: 44px;
+}
+.our-team-social-links a:hover,
+.our-team-social-links a:focus {
+  background-color: var(--icon-background-color-hover);
+  border-radius: 50px;
+}
+.our-team-social-links svg:hover,
+.our-team-social-links svg:focus {
+  stroke: var(--font-color-4);
+  fill: var(--font-color-4);
+}
+.our-clients-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 30px;
+}
+.our-clients-item {
+  display: block;
+  fill: var(--icon-color-1);
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  max-width: 170px;
+  max-height: 92px;
+  padding: 16px 32px;
+}
+.our-clients-item:hover,
+.our-clients-item:hover {
+  fill: var(--font-color-2);
+  border-color: var(--font-color-2);
+}
+.footer-container {
+  display: flex;
+}
+.footer-social-links h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--font-color-4);
+}
+.footer-social-links {
+  padding-left: 70px;
+  padding-top: 12px;
+}
+.footer-social-links ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+.footer-social-links li {
+  max-width: 44px;
+  max-height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+}
+.footer-social-links li:hover,
+.footer-social-links li:focus {
+  background-color: var(--icon-background-color-hover);
+}
+.footer-social-links svg {
+  fill: var(--icon-color-hover);
+  padding: 12px;
 }
