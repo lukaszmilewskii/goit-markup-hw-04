@@ -261,12 +261,12 @@ h2 {
 .our-team-container {
   background-color: var(--background-color-3);
 }
-.our-team ul {
+.our-team > ul {
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
 }
-.our-team ul li h3 {
+.our-team > ul li h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -275,7 +275,7 @@ h2 {
   padding-top: 30px;
   padding-bottom: 10px;
 }
-.our-team ul li p {
+.our-team > ul li p {
   line-height: 1.18;
   text-align: center;
   color: var(--font-color-3);
@@ -297,12 +297,13 @@ h2 {
   fill: var(--icon-color-1);
   padding: 12px;
 }
+.our-team-social-links li,
 .our-team-social-links a {
   max-width: 44px;
   max-height: 44px;
 }
-.our-team-social-links a:hover,
-.our-team-social-links a:focus {
+.our-team-social-links li:hover,
+.our-team-social-links li:focus {
   background-color: var(--icon-background-color-hover);
   border-radius: 50px;
 }
