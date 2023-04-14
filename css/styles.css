@@ -227,6 +227,7 @@ h2 {
 }
 .our-trumps ul {
   display: flex;
+  justify-content: space-between;
   gap: 30px;
 }
 .our-trumps ul li h3 {
@@ -243,9 +244,12 @@ h2 {
   color: var(--font-color-3);
 }
 .our-trumps-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
   background-color: var(--background-color-3);
-  text-align: center;
-  padding: 25px 0;
   margin-bottom: 30px;
 }
 .what-we-do {
@@ -296,6 +300,9 @@ h2 {
 .our-team-social-links svg {
   fill: var(--icon-color-1);
   padding: 12px;
+}
+.our-team-social-links a {
+  display: inline-block;
 }
 .our-team-social-links li,
 .our-team-social-links a {
